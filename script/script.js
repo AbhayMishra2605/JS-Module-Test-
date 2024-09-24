@@ -1,6 +1,6 @@
 let com_score;
 let user_score;
-setTimeout(()=>{
+
 fetch('score.html')
 .then(response => response.text())
 .then(data => {
@@ -16,7 +16,7 @@ fetch('score.html')
     user_score.value = stroredUserScore;
 })
 .catch(error => console.log('Error:', error));
-},1);
+
 
 
 function game(userChoice) {
