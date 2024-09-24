@@ -9,8 +9,7 @@ body {
     min-width:  100vw;
     background-color: #8CC461;
     font-family: 'Roboto', sans-serif;
-     user-select: none;
-    pointer-events: none;
+    
 }
 
  #gameRule{
