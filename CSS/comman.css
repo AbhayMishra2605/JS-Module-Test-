@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width:  100vw;
+    background-color: #8CC461;
+    font-family: 'Roboto', sans-serif;
+}
+
+ #gameRule{
+    position: absolute;
+    max-width: 90%;
+    top: 31%;
+    left: 73%;
+   
+}
+
+#ruleBox{
+   
+   max-width:  21vw;
+    padding-left: 2vw;
+    padding-right: 0.7vw;
+    list-style-type: square;
+    
+    background-color: #004429;
+    border-radius: 0.9vw;
+    border: 0.5vw solid #FFFFFF;
+}
+
+#ruleBox li{
+    color: #FFFFFF;
+    margin-bottom: 0.8vw;
+    font-size: 1.2vw;
+    font-weight: 400;
+    line-height: 1.2vw;
+}
+#ruleBox h3{
+    padding: 1vw;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.9vw;
+    line-height: 2vw;
+    color: #FFFFFF;
+}
+
+#ruleBox li::marker{
+    color: #FFD600;
+    
+}
+#closeRules{
+    font-family: 'Dangrek',sans-serif;
+    width: 4vw;
+    height: 4vw;
+    position: relative;
+    left: 19vw;
+    top: 4vh;
+    font-weight: 400;
+    border-radius: 10vw;
+    color: #FFFFFF;
+    font-size: 2vw;
+    background-color: #FF0000;
+    border: 0.3vw solid #FFFFFF;
+    cursor: pointer;
+}
+
+#rule-container{
+    display: none;
+}
+
+#rulesBtn , #nextBtn{
+    
+    position: absolute;
+    top: 94vh;
+    left:90vw;
+    display: flex;
+    width:7vw;
+    border: 0.14vw solid #FFFFFF;
+    font-size: 1.45vw;
+    font-weight: 600;
+    letter-spacing: 0.14vw;
+    border-radius: 0.8vw;
+    height: 5.59vh;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #8CC461;
+}
+#nextBtn{
+    text-decoration: none;
+   
+}
+
+#rockSec ,#paperSec , #sessiorSec {
+    position: absolute;
+    width: 8.5vw;
+    height: 8.5vw;
+    background-color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 7vw;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+#rockSec{
+    border: 0.8vw solid #0074B6;
+    top: 45vh;
+    left: 30vw;
+}
+
+#paperSec{
+    top: 75vh;
+    left: 43vw;
+    border: 0.8vw solid #FFA943;
+}
+
+#sessiorSec{
+    
+    top: 45vh;
+    left: 56vw;
+    border: 0.8vw solid #BD00FF;
+}
+
+#rockImg, #paperImg{
+    width: 5vw;
+
+}
+
+#sessiorImg{
+    width: 3vw;
+}
+
+#line1 {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    width: 20%;
+}
+
+#line2 {
+    position: absolute;
+    width: 10%;
+    height: 35%;
+    top: 50%;
+    left: 50%;
+    transform: rotate(15deg);
+}
+
+#line3 {
+    position: absolute;
+    width: 10%;
+    height: 35%;
+    top: 50%;
+    left: 35%;
+    transform: rotate(-15deg);
+}
+
+#userPiked{
+    position: absolute;
+    top: 45%;
+    left: 22%;
+    display: block;
+}
+#computerPiked{
+    position: absolute;
+    top:45%;
+    left: 64.5%;
+}
+
+#piked{
+    font-size: 1.32vw;
+    color: #FFFFFF;
+    line-height: 1.3vw;
+    letter-spacing: 0.1vw;
+    font-weight: 600;
+}
+
+
+#youPiked{
+   
+    position: absolute;
+    left:-7%;
+    top: 19%;
+}
+
+#pcPiked{
+    position: absolute;
+    left:8%;
+    top: 19%;
+}
+@media(display-mode:fullscreen){
+
+
+    #gameRule{
+    
+    
+    top: 40vh;
+    }    
+
+}
+
+
+.massage{
+    font-weight: 800;
+    position: absolute;
+    left:42%;
+    top:65%;
+    text-align: center;
+    color: #FFFFFF;
+    display: none
+}
+
+.massage h1{
+    font-size: 3.04vw;
+    line-height: 3.5vw;
+    letter-spacing: 0.12vw;
+}
+.massage h3{
+    font-size: 1.95vw;
+    line-height: 2vw;
+    letter-spacing: 0.12vw;
+}
+
+.massage a, #massageFinal a {
+    width: 13vw;
+    padding: 0.8vw;;
+    border-radius: 0.8vw;
+    text-decoration: none;
+    color: #6B6B6B;
+    background-color: #FFFFFF;
+    display: inline-block; 
+    font-weight: 600;
+    margin-top: 1vw; 
+    line-height: 1.5vw;
+    letter-spacing: 0.12vw;
+}
+
+#massageFinal{
+    font-weight: 600;
+    position: absolute;
+    left:35%;
+    top:55%;
+    text-align: center;
+    color: #FFFFFF;
+    display: none;
+}
+
+#massageFinal h1{
+    
+    font-size: 7vw;
+    line-height: 7vw;
+    letter-spacing: 0.2vw;
+}
+#massageFinal h3{
+    margin-top: 0.7vw;
+    font-size: 3vw;
+    letter-spacing: 0.2vw;
+}
+#massageFinal a{
+    margin-top: 3vw;
+}
+
+#vectoryTrophy{
+    position: absolute;
+    top: 24%;
+    left: 45%;
+    width: 11vw;
+    
+}
+
+#animation {
+    position: absolute;
+    top: 8%;
+    left: 34%;
+    width: 33vw;
+}
+
+#star1 , #star2,#star3,#star4,#star5,#star6,#star7,#star8 {
+    position: absolute;
+    animation: tickle 3s  ease-in-out;
+}
+
+@keyframes tickle {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(3px, -3px) rotate(10deg);
+    }
+    50% {
+        transform: translate(-3px, 3px) rotate(-10deg);
+    }
+    75% {
+        transform: translate(5px, -5px) rotate(5deg);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+#star1 {
+    animation-delay: 0.2s;
+}
+#star2 {
+    animation-delay: 0.4s;
+}
+#star2 {
+    animation-delay: 0.4s;
+}
+#star3 {
+    animation-delay: 0.4s;
+}
+#star4 {
+    animation-delay: 0.4s;
+}
+#star5 {
+    animation-delay: 0.4s;
+}
+#star6 {
+    animation-delay: 0.4s;
+}
+#star7 {
+    animation-delay: 0.4s;
+}
+#star8 {
+    animation-delay: 0.4s;
+}
+#star1{
+    position: absolute;
+    margin-top: 50%;
+    left: 25%;
+    width: 2vw;
+}
+#star2{
+    position: absolute;
+    margin-top: 25%;
+    
+    width: 6.5vw;
+}
+#star3{
+    position: absolute;
+    margin-top: 8%;
+    left: 13%;
+    width: 4.5vw;
+}
+#star4{
+    position: absolute;
+    
+    left: 25%;
+    width: 2.4vw;
+}
+#star5{
+    position: absolute;
+    margin-top: 5%;
+    left: 40%;
+    width: 2.4vw;
+}
+#star6{
+    position: absolute;
+    
+    left: 60%;
+    width: 7vw;
+}
+#star7{
+    position: absolute;
+    margin-top: 20%;
+    left: 85%;
+    width: 2.4vw;
+}
+#star8{
+    position: absolute;
+    margin-top: 30%;
+    left: 70%;
+    width: 8vw;
+}
