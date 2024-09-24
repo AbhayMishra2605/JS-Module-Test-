@@ -2,40 +2,21 @@ let com_score;
 let user_score;
 
 
-var xhr = new XMLHttpRequest();
+fetch('score.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('template-container').innerHTML = data;
 
+    com_score=document.getElementById("computerScore");
+    user_score=document.getElementById("userScore");
 
-xhr.open('GET', 'score.html', true);
+    const stroredComScore =localStorage.getItem('computerScore') || 0;
+    const stroredUserScore = localStorage.getItem('userScore') || 0;
 
-
-xhr.send();
-
-
-xhr.onload = function() {
-    if (xhr.status >= 200 && xhr.status < 300) {
-      
-        document.getElementById('template-container').innerHTML = xhr.responseText;
-
-
-        let com_score = document.getElementById("computerScore");
-        let user_score = document.getElementById("userScore");
-
-        
-        const storedComScore = localStorage.getItem('computerScore') || 0;
-        const storedUserScore = localStorage.getItem('userScore') || 0;
-
-        com_score.value = storedComScore;
-        user_score.value = storedUserScore;
-    } else {
-        console.error('Error: ' + xhr.status);
-    }
-};
-
-
-xhr.onerror = function() {
-    console.error('Request failed');
-};
-
+    com_score.value = stroredComScore;
+    user_score.value = stroredUserScore;
+})
+.catch(error => console.log('Error:', error));
 function game(userChoice) {
     const choices = ['rock', 'paper', 'scissor'];
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
