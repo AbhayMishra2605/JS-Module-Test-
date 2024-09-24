@@ -1,23 +1,40 @@
 let com_score;
 let user_score;
 
-fetch('score.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('template-container').innerHTML = data;
 
-    com_score=document.getElementById("computerScore");
-    user_score=document.getElementById("userScore");
-
-    const stroredComScore =localStorage.getItem('computerScore') || 0;
-    const stroredUserScore = localStorage.getItem('userScore') || 0;
-
-    com_score.value = stroredComScore;
-    user_score.value = stroredUserScore;
-})
-.catch(error => console.log('Error:', error));
+var xhr = new XMLHttpRequest();
 
 
+xhr.open('GET', 'score.html', true);
+
+
+xhr.send();
+
+
+xhr.onload = function() {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      
+        document.getElementById('template-container').innerHTML = xhr.responseText;
+
+
+        let com_score = document.getElementById("computerScore");
+        let user_score = document.getElementById("userScore");
+
+        
+        const storedComScore = localStorage.getItem('computerScore') || 0;
+        const storedUserScore = localStorage.getItem('userScore') || 0;
+
+        com_score.value = storedComScore;
+        user_score.value = storedUserScore;
+    } else {
+        console.error('Error: ' + xhr.status);
+    }
+};
+
+
+xhr.onerror = function() {
+    console.error('Request failed');
+};
 
 function game(userChoice) {
     const choices = ['rock', 'paper', 'scissor'];
