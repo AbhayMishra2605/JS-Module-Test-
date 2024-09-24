@@ -73,7 +73,7 @@ body {
 }
 
 #rulesBtn , #nextBtn{
-    
+    cursor: pointer;
     position: absolute;
     top: 94vh;
     left:90vw;
