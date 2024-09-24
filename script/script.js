@@ -28,8 +28,8 @@ function game(userChoice) {
     localStorage.setItem('userpick',userChoice);
     localStorage.setItem('comppick',computerChoice);
     window.location.href = "win.html";
-        user_score.value = parseInt(user_score.value) + 1;
-        localStorage.setItem('userScore', user_score.value);
+       //user_score.value = parseInt(user_score.value) + 1;
+        //localStorage.setItem('userScore', user_score.value);
         
             
 
@@ -52,8 +52,8 @@ function game(userChoice) {
         localStorage.setItem('userpick',userChoice);
         localStorage.setItem('comppick',computerChoice);
         window.location.href = "win.html";
-        user_score.value = parseInt(user_score.value) + 1;
-        localStorage.setItem('userScore',user_score.value);
+        //user_score.value = parseInt(user_score.value) + 1;
+       // localStorage.setItem('userScore',user_score.value);
         
     } else if (computerChoice === 'scissor') {
         localStorage.setItem('userpick',userChoice);
@@ -73,8 +73,8 @@ function game(userChoice) {
         localStorage.setItem('userpick',userChoice);
         localStorage.setItem('comppick',computerChoice);
         window.location.href = "win.html";
-        user_score.value = parseInt(user_score.value) + 1;
-        localStorage.setItem('userScore', user_score.value);
+       // user_score.value = parseInt(user_score.value) + 1;
+       // localStorage.setItem('userScore', user_score.value);
     } else if (computerChoice === 'paper'){
         localStorage.setItem('comppick',computerChoice);
         localStorage.setItem('userpick',userChoice);
