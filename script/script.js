@@ -109,7 +109,7 @@ function closeFun(){
 
 setTimeout(function() {
     document.getElementById("loading-screen").style.display = "none";
-  }, 100);
+  }, 200);
 
 
 
