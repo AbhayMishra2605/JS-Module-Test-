@@ -49,7 +49,8 @@ let tag1 =document.querySelector("#pcPiked div");
         
     }
     
-   
+    user_score.value = parseInt(user_score.value) + 1;
+        localStorage.setItem('userScore', user_score.value);
 
     setTimeout(()=>{
         let massage=document.querySelector('.massage');
