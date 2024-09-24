@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/comman.css">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    
+    <div id="root">
+        <div id="animation">
+           
+            <img src="Pictures/Star 1.png" alt="star1" id="star1">
+            <img src="Pictures/star 1.png" alt="star2" id="star2">
+            <img src="Pictures/star 1.png" alt="star2" id="star3">
+            <img src="Pictures/star 1.png" alt="star2" id="star4">
+            <img src="Pictures/star 1.png" alt="star2" id="star5">
+            <img src="Pictures/star 1.png" alt="star2" id="star6">
+            <img src="Pictures/star 1.png" alt="star2" id="star7">
+            <img src="Pictures/star 1.png" alt="star2" id="star8">
+      
+           
+        </div>
+        
+       <img src="Pictures/Vector.png" alt="Victory" id="vectoryTrophy">
+        <div id="massageFinal">
+            <h1 >HURRAY!!</h1>
+            <h3>YOU WON THE GAME</h3>
+            <a href="index.html">PLAY AGAIN</a>
+        </div>
+      
+       
+    </div>
+    <div id="rule-container">
+        
+    </div>
+    <button id="rulesBtn" onclick="openRule()">RULES</button>
+<script src="script/script.js"></script>
+    <script >
+        
+    setTimeout(()=>{
+        let massage=document.querySelector('#massageFinal');
+        
+        massage.style.display='block';
+       
+
+    },100);
+        
+    </script>
+</body>
+</html>
